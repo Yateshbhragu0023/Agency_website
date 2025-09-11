@@ -128,26 +128,33 @@ export default function Footer() {
           {/* Social Media */}
           <h2 className="font-semibold text-white mt-5 mb-3">Social Media</h2>
           <div className="flex gap-3">
-            <a href="facebook.com/profile.php?id=100068991917924&mibextid=ZbWKwL">
-              <span className="p-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-md">
+
+            <span className="p-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-md">
+              <a href="facebook.com/profile.php?id=100068991917924&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
                 <FaFacebookF />
-              </span>
-            </a>
-            <a href="www.youtube.com/@yateshtechhub">
-              <span className="p-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-md">
+              </a>
+            </span>
+
+
+            <span className="p-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-md">
+              <a href="www.youtube.com/@yateshtechhub" target="_blank" rel="noopener noreferrer">
                 <FaYoutube />
-              </span>
-            </a>
-            <a href="instagram.com/theyatesh_bhragu?igsh=MTBoa3Zic2hleWkyYg==">
-              <span className="p-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-md">
+              </a>
+            </span>
+
+
+            <span className="p-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-md">
+              <a href="instagram.com/theyatesh_bhragu?igsh=MTBoa3Zic2hleWkyYg==" target="_blank" rel="noopener noreferrer">
                 <FaInstagram />
-              </span>
-            </a>
-            <a href="www.linkedin.com/in/yatesh-bhragu-41a923316">
-              <span className="p-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-md">
+              </a>
+            </span>
+
+            <span className="p-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-md">
+              <a href="www.linkedin.com/in/yatesh-bhragu-41a923316" target="_blank" rel="noopener noreferrer">
                 <FaLinkedinIn />
-              </span>
-            </a>
+              </a>
+            </span>
+
           </div>
         </div>
       </div>
