@@ -130,27 +130,27 @@ export default function Footer() {
           <div className="flex gap-3">
 
             <span className="p-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-md">
-              <a href="facebook.com/profile.php?id=100068991917924&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
+              <a href="https://facebook.com/profile.php?id=100068991917924&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
                 <FaFacebookF />
               </a>
             </span>
 
 
             <span className="p-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-md">
-              <a href="www.youtube.com/@yateshtechhub" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.youtube.com/@yateshtechhub" target="_blank" rel="noopener noreferrer">
                 <FaYoutube />
               </a>
             </span>
 
 
             <span className="p-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-md">
-              <a href="instagram.com/theyatesh_bhragu?igsh=MTBoa3Zic2hleWkyYg==" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/yatesh.techhub/" target="_blank" rel="noopener noreferrer">
                 <FaInstagram />
               </a>
             </span>
 
             <span className="p-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-md">
-              <a href="www.linkedin.com/in/yatesh-bhragu-41a923316" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/yatesh-bhragu-41a923316/" target="_blank" rel="noopener noreferrer">
                 <FaLinkedinIn />
               </a>
             </span>

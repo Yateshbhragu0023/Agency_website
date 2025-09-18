@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Menu, X, Phone } from "lucide-react";
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export default function Header() {
 
@@ -35,8 +36,22 @@ export default function Header() {
 
   ];
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <header className="w-full bg-black text-white shadow-md sticky top-0 z-[999] border border-blue-700 rounded-2xl p-2 mt-4">
+    <header className={`w-full bg-black text-white shadow-md sticky top-0 z-[999] border border-blue-700 rounded-2xl p-2 mt-4 transition-all duration-300 ${isScrolled ? "py-2 px-4 top-5" : "py-4 px-6"}`}>
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
 
         {/* Logo */}
@@ -66,7 +81,9 @@ export default function Header() {
         <div className="hidden md:flex items-center space-x-3">
           <button className="flex items-center space-x-2 bg-blue-600  text-white px-4 py-2 rounded-full shadowB shadow-lg hover: transition">
             <Phone size={18} />
-            <span className="font-semibold">+91 9672427970</span>
+            <a href="https://wa.me/9672427970?text=Hi,%20Mr.%20yatesh%20i%20want%20a%20website%20for%20my%20business" target="_blank">
+              <span className="font-semibold">Chat With Us</span>
+            </a>
           </button>
         </div>
 
@@ -94,7 +111,9 @@ export default function Header() {
           ))}
           <button className="w-full flex items-center justify-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-purple-700 transition">
             <Phone size={18} />
-            <span className="font-semibold">+91 9672427970</span>
+            <a href="https://wa.me/9672427970?text=Hi,%20Mr.%20yatesh%20i%20want%20a%20website%20for%20my%20business">
+              <span className="font-semibold">Chat With Us</span>
+            </a>
           </button>
         </div>
       )}

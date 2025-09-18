@@ -10,6 +10,14 @@ import Context from './context/Context'
 import AdminLayout from './AdminPanel/AdminLayout'
 import Dashboard from './AdminPanel/Compenents/Dashboard'
 import Profile from './AdminPanel/Compenents/Profile'
+import ViewProject from './AdminPanel/Compenents/Projects/ViewProject'
+import AddProject from './AdminPanel/Compenents/Projects/AddProject'
+import ViewReview from './AdminPanel/Compenents/Review/ViewReview'
+import AddReview from './AdminPanel/Compenents/Review/AddReview'
+import ViewService from './AdminPanel/Compenents/Service/ViewService'
+import AddService from './AdminPanel/Compenents/Service/AddService'
+import ViewTeam from './AdminPanel/Compenents/Team/ViewTeam'
+import AddTeam from './AdminPanel/Compenents/Team/AddTeam'
 
 export default function App() {
 
@@ -52,6 +60,38 @@ export default function App() {
           {
             path : "profile",
             element : <Profile/>
+          },
+          {
+            path : "project",
+            element : <ViewProject/>
+          },
+          {
+            path : "addproject",
+            element : <AddProject/>
+          },
+          {
+            path : "review",
+            element : <ViewReview/>
+          },
+          {
+            path : "addreview",
+            element : <AddReview/>
+          },
+          {
+            path : "service",
+            element : <ViewService/>
+          },
+          {
+            path : "addservice",
+            element : <AddService/>
+          },
+          {
+            path : "team",
+            element : <ViewTeam/>
+          },
+          {
+            path : "addteam",
+            element : <AddTeam/>
           }
         ]
       }

@@ -6,6 +6,7 @@ import { IoTrendingDownSharp, IoTrendingUpSharp } from "react-icons/io5";
 import { FaCheck } from "react-icons/fa6";
 import { FaRegLightbulb } from "react-icons/fa6";
 import Slider from './Slider';
+import Slider2 from './Slider2';
 
 
 const sections = [
@@ -108,11 +109,14 @@ after:absolute after:left-0  after:bottom-0 after:w-full after:h-1/2 after:bg-bl
           <h1 className='text-white font-semibold text-[18px] bg-[#0D0D0D] border border-blue-700 cursor-pointer w-32 py-1 mx-auto rounded-md' >Our Work </h1>
           <p className='text-white font-semibold text-5xl'>Let's see Our Porfolio Work</p>
         </div>
+        <div>
+          <Slider2/>
+        </div>
       </section>
       {/* Our Portfolio work  end*/}
 
       {/* servise section start  */}
-      <section className='my-4 py-12 '>
+      <section className='my-4 pb-12  '>
         <div className='text-center space-y-2'>
           <h1 className='text-white font-semibold text-[18px] bg-[#0D0D0D] border border-blue-700 cursor-pointer w-32 py-1 mx-auto rounded-md' >Services </h1>
           <p className='text-white font-semibold text-5xl'>What we do Best</p>
