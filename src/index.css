@@ -65,3 +65,28 @@ html {
    overflow-y: scroll;
   scroll-snap-type: y proximity;
 }
+
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* Breakpoints */
+@media (max-width: 1024px) {
+  .swiper {
+    padding: 0 1rem;
+  }
+  .swiper-slide {
+    width: 40% !important; /* show 2 slides on tablets */
+  }
+}
+
+@media (max-width: 640px) {
+  .swiper-slide {
+    width: 80% !important; /* show 1 slide on mobile */
+  }
+}

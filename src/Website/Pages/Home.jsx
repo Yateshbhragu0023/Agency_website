@@ -27,6 +27,7 @@ const sections = [
 export default function Home() {
 
   const [scrollY, setScrollY] = useState(0);
+  const [pause, setPause] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -42,7 +43,59 @@ export default function Home() {
     "https://images.unsplash.com/photo-1496483648148-47c686dc86a8",
   ];
 
-  const [pause, setPause] = useState(false);
+  const services = [
+    {
+      id: 1,
+      name: "End-to-End Website Development",
+      icon: FaRegCheckCircle,
+    },
+    {
+      id: 2,
+      name: "e-commerce Website",
+      icon: FaRegCheckCircle,
+    },
+    {
+      id: 3,
+      name: "custom Website Design",
+      icon: FaRegCheckCircle,
+    },
+    {
+      id: 4,
+      name: "Website optimization",
+      icon: FaRegCheckCircle,
+    },
+    {
+      id: 5,
+      name: "landing page",
+      icon: FaRegCheckCircle,
+    },
+    {
+      id: 6,
+      name: "SEO (search engine optimization)",
+      icon: FaRegCheckCircle,
+    },
+  ]
+
+  const benefits = [
+    {
+      id: 1,
+      icons: <IoTrendingDownSharp/>,
+      title: "End-To-End Services",
+      description: "From ideation to launch, we handle every step of your website’s journey, ensuring a seamless process."
+    },
+    {
+      id: 2,
+      icons: <FaCheck/>,
+      title: "Budget-Friendly Packages",
+      description: "No hidden fees. We offer clear and upfront pricing, so you know exactly what you’re investing in."
+    },
+    {
+      id: 3,
+      icons: <IoTrendingUpSharp/>,
+      title: "Long-Term Partnership",
+      description: "Our work doesn’t stop at launch. We continually optimize your website to keep it ahead of the competition."
+    }
+  ]
 
 
   return (
@@ -62,9 +115,9 @@ after:absolute after:left-0  after:bottom-0 after:w-full after:h-1/2 after:bg-bl
       <section className='my-4 py-12'>
         <div className='text-center space-y-2'>
           <h1 className='text-white font-semibold text-[18px] bg-[#0D0D0D] border border-blue-700 cursor-pointer w-32 py-1 mx-auto rounded-md' >Expertise </h1>
-          <p className='text-white font-semibold text-5xl'>Because Experience Matter</p>
-          <div className='grid grid-cols-6 ' >
-            <div className='col-span-2 text-white mt-8 ' >
+          <p className='text-white font-semibold md:text-5xl sm:text-4xl text-3xl'>Because Experience Matter</p>
+          <div className='md:flex sm:flex  md:pt-7 sm:pt-7 pt-3 ' >
+            <div className='md:w-[35%] sm:w-[45%] text-white mt-8 ' >
               <motion.img
                 initial={{ y: 200, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
@@ -75,23 +128,23 @@ after:absolute after:left-0  after:bottom-0 after:w-full after:h-1/2 after:bg-bl
                 src={officeImg} className='rounded-xl h-[350px] transition-all ' alt="" />
 
             </div>
-            <div className='col-span-4 ml-8 mt-8 space-y-5' >
-              <h1 className='text-gray-200 opacity-70 text-6xl font-semibold text-start' > We have 2 Years+ Experience
+            <div className='md:w-[65%] sm:w-[55%]  md:ml-8 sm:ml-8 ml-2 mt-8 space-y-5' >
+              <h1 className='text-gray-200 opacity-70 md:text-6xl sm:text-3xl text-5xl font-semibold text-start' > We have 2 Years+ Experience
                 Of Web development
               </h1>
-              <p className='text-white/65 text-start font-semibold text-[19px]'>
+              <p className='text-white/65 text-start font-semibold md:text-[19px] sm:text-16px text-[15px]'>
                 At WEB TH, we specialize in crafting innovative website development strategies that drive real business growth. Our expertise ensures your brand stays ahead in the competitive digital landscape.
               </p>
               <div className='flex justify-between gap-5'>
-                <div className='w-[30%] py-5 rounded-2xl text-center text-[22px] text-white/75 bg-opacity-20 font-semibold bg-blue-700'>
+                <div className='w-[30%] py-5 rounded-2xl text-center md:text-[22px] sm:text-[19px] text-white/75 bg-opacity-20 font-semibold bg-blue-700'>
                   <h1> 3 Years+</h1>
                   <h1>Experience</h1>
                 </div>
-                <div className='w-[30%] py-5 rounded-2xl text-center text-[22px] text-white/75 bg-opacity-20 font-semibold bg-blue-700'>
+                <div className='w-[30%] py-5 rounded-2xl text-center md:text-[22px] sm:text-[19px] text-white/75 bg-opacity-20 font-semibold bg-blue-700'>
                   <h1> 30+</h1>
                   <h1>Projects</h1>
                 </div>
-                <div className='w-[30%] py-5 rounded-2xl text-center text-[22px] text-white/75 bg-opacity-20 font-semibold bg-blue-700'>
+                <div className='w-[30%] py-5 rounded-2xl text-center md:text-[22px] sm:text-[19px] text-white/75 bg-opacity-20 font-semibold bg-blue-700'>
                   <h1> 40+</h1>
                   <h1>Worldwide Client</h1>
                 </div>
@@ -104,56 +157,44 @@ after:absolute after:left-0  after:bottom-0 after:w-full after:h-1/2 after:bg-bl
       {/* exxpreriemce section end  */}
 
       {/* Our Portfolio work  start*/}
-      <section className='my-4 py-12'>
+      <section className='my-4 md:py-12 sm:py-10 py-0'>
         <div className='text-center space-y-2'>
           <h1 className='text-white font-semibold text-[18px] bg-[#0D0D0D] border border-blue-700 cursor-pointer w-32 py-1 mx-auto rounded-md' >Our Work </h1>
-          <p className='text-white font-semibold text-5xl'>Let's see Our Porfolio Work</p>
+          <p className='text-white font-semibold md:text-5xl sm:text-4xl text-3xl'>Let's see Our Porfolio Work</p>
         </div>
         <div>
-          <Slider2/>
+          <Slider2 />
         </div>
       </section>
       {/* Our Portfolio work  end*/}
 
       {/* servise section start  */}
-      <section className='my-4 pb-12  '>
+      <section className='md:my-4 sm:my-4 my-0  md:pb-12 sm:pb-10 pb-5  '>
         <div className='text-center space-y-2'>
           <h1 className='text-white font-semibold text-[18px] bg-[#0D0D0D] border border-blue-700 cursor-pointer w-32 py-1 mx-auto rounded-md' >Services </h1>
-          <p className='text-white font-semibold text-5xl'>What we do Best</p>
+          <p className='text-white font-semibold md:text-5xl sm:text-4xl text-3xl'>What we do Best</p>
         </div>
-        <div className=' bg-gray-900 p-10 rounded-xl border border-gray-500 flex gap-8 mt-10 mx-auto'>
-          <div className='w-[50%]'>
+        <div className=' bg-gray-900 md:p-10 sm:p-7 p-4  rounded-xl border border-gray-500 md:flex sm:flex  md:gap-8 sm:gap-5 mt-10 mx-auto'>
+          <div className='md:w-[50%] sm:w-[50%] w-[100%]'>
             <h1 className='text-white/75 text-start font-semibold text-3xl'>What we Do Best</h1>
             <ul className='space-y-3 mt-2'>
-              <li className='font-semibold uppercase  text-white/60 flex gap-2 place-items-center'>
-                <span className='text-blue-600 text-xl ' ><FaRegCheckCircle /></span>
-                <span>End-to-End Website Development</span>
-              </li>
-              <li className='font-semibold uppercase text-white/60 flex gap-2 place-items-center'>
-                <span className='text-blue-600 text-xl ' ><FaRegCheckCircle /></span>
-                <span>e-commerce Website </span>
-              </li>
-              <li className='font-semibold uppercase text-white/60 flex gap-2 place-items-center'>
-                <span className='text-blue-600 text-xl ' ><FaRegCheckCircle /></span>
-                <span> custom Website Design</span>
-              </li>
-              <li className='font-semibold uppercase text-white/60 flex gap-2 place-items-center'>
-                <span className='text-blue-600 text-xl ' ><FaRegCheckCircle /></span>
-                <span>Website optimization</span>
-              </li>
-              <li className='font-semibold uppercase text-white/60 flex gap-2 place-items-center'>
-                <span className='text-blue-600 text-xl ' ><FaRegCheckCircle /></span>
-                <span>landing page</span>
-              </li>
-              <li className='font-semibold uppercase text-white/60 flex gap-2 place-items-center'>
-                <span className='text-blue-600 text-xl ' ><FaRegCheckCircle /></span>
-                <span>SEo (search engine optimization)</span>
-              </li>
+              {
+                services.map(
+                  (c) => {
+                    return (
+                      <li key={c.id} className='font-semibold uppercase  text-white/60 flex gap-2 place-items-center'>
+                        <span className='text-blue-600 text-xl ' ><FaRegCheckCircle /></span>
+                        <span>{c.name}</span>
+                      </li>
+                    )
+                  }
+                )
+              }
             </ul>
           </div>
-          <div className='bg-gray-950 shadowC  rounded-xl p-5 w-[50%] space-y-5 text-start'>
+          <div className='bg-gray-950 shadowC  rounded-xl p-5 md:w-[50%] sm:w-[50%] w-[100%] md:mt-0 sm:mt-0 mt-8 space-y-5 text-start'>
             <div className='bg-blue-700 p-4 rounded-lg '>
-              <h1 className='text-white/80 text-3xl text-start font-semibold '>All Your Website Need,
+              <h1 className='text-white/80 md:text-3xl sm:text-xl text-xl text-start font-semibold '>All Your Website Need,
                 Expertly Handled
               </h1>
             </div>
@@ -172,24 +213,22 @@ after:absolute after:left-0  after:bottom-0 after:w-full after:h-1/2 after:bg-bl
       <section className='my-4 py-12'>
         <div className='text-center space-y-2'>
           <h1 className='text-white font-semibold text-[18px] bg-[#0D0D0D] border border-blue-700 cursor-pointer w-32 py-1 mx-auto rounded-md' >Benefits </h1>
-          <p className='text-white font-semibold text-5xl'>What benefits work with me</p>
+          <p className='text-white font-semibold md:text-5xl sm:text-4xl text-3xl'>What benefits work with me</p>
         </div>
-        <div className='grid grid-cols-3 gap-7 mt-12 w-[90%] mx-auto ' >
-          <div className='col-span-1 rounded-3xl border border-white/55  p-4 px-9 bg-blue-950/20 text-white space-y-3' >
-            <h1 className='bg-gray-700/30 p-2 w-12 rounded-md text-center text-3xl'><IoTrendingDownSharp /></h1>
-            <h1 className='font-semibold text-xl' >End-To-End Services</h1>
-            <p className='font-semibold text-white/60' >From ideation to launch, we handle every step of your website’s journey, ensuring a seamless process.</p>
-          </div>
-          <div className='col-span-1 rounded-3xl border border-white/55  p-4 px-9 bg-blue-950/20 text-white space-y-3' >
-            <h1 className='bg-gray-700/30 p-2 w-12 rounded-md text-center text-3xl'><FaCheck /></h1>
-            <h1 className='font-semibold text-xl' >Budget-Friendly Packages</h1>
-            <p className='font-semibold text-white/60' >No hidden fees. We offer clear and upfront pricing, so you know exactly what you’re investing in.</p>
-          </div>
-          <div className='col-span-1 rounded-3xl border border-white/55  p-4 px-9 bg-blue-950/20 text-white space-y-3' >
-            <h1 className='bg-gray-700/30 p-2 w-12 rounded-md text-center text-3xl'><IoTrendingUpSharp /></h1>
-            <h1 className='font-semibold text-xl' >Long-Term Partnership</h1>
-            <p className='font-semibold text-white/60' >Our work doesn’t stop at launch. We continually optimize your website to keep it ahead of the competition.</p>
-          </div>
+        <div className='grid md:grid-cols-3 grid-cols-1 gap-7 mt-12 w-[90%] mx-auto ' >
+          {
+            benefits.map(
+              (b) => {
+                return (
+                  <div key={b.id} className='col-span-1 rounded-3xl border border-white/55  p-4 md:px-9 sm:px-8 px-4 bg-blue-950/20 text-white space-y-3' >
+                    <h1 className='bg-gray-700/30 p-2 w-12 rounded-md text-center text-3xl'>{b.icons} </h1>
+                    <h1 className='font-semibold text-2xl' >{b.title}</h1>
+                    <p className='font-semibold text-white/60 md:text-sm sm:text-xs text-[14px]' >From ideation to launch, we handle every step of your website’s journey, ensuring a seamless process.</p>
+                  </div>
+                )
+              }
+            )
+          }
 
         </div>
       </section>
@@ -199,7 +238,7 @@ after:absolute after:left-0  after:bottom-0 after:w-full after:h-1/2 after:bg-bl
       <section className='my-4 md:py-12 py-5'>
         <div className='text-center space-y-2'>
           <h1 className='text-white font-semibold text-[17px] bg-[#0D0D0D] border border-blue-700 cursor-pointer w-40 py-1 mx-auto rounded-md' >How we Work ? </h1>
-          <p className='text-white font-semibold sm:text-5xl text-3xl md:text-5xl'>Let's see How We Work</p>
+          <p className='text-white font-semibold sm:text-4xl text-3xl md:text-5xl'>Let's see How We Work</p>
         </div>
         <div>
           <div className='flex sm:w-[80%] md:w-[40%] gap-4 mx-auto my-8 md:p-5  p-3 border   border-orange-200 bg-orange-100/10 rounded-2xl'>
@@ -239,7 +278,7 @@ after:absolute after:left-0  after:bottom-0 after:w-full after:h-1/2 after:bg-bl
       <section className='my-4 py-8'>
         <div className='text-center space-y-4'>
           <h1 className='text-white font-semibold text-[17px] bg-[#0D0D0D] border border-blue-700 cursor-pointer w-40 py-1 mx-auto rounded-md' >Testemonials </h1>
-          <p className='text-white font-semibold text-5xl'>What Our Clients Say</p>
+          <p className='text-white font-semibold md:text-5xl sm:text-4xl text-3xl'>What Our Clients Say</p>
           <p className="text-gray-300 mb-12 mt-">
             Hear from businesses we’ve helped grow with powerful websites.
           </p>
@@ -288,12 +327,12 @@ after:absolute after:left-0  after:bottom-0 after:w-full after:h-1/2 after:bg-bl
       {/* testemonial section start */}
 
       {/* FAQ section FAQ start */}
-      <section className='my-4 py-8 text-white items-center '>
+      <section className='my-4 md:py-8 sm:py-8  text-white items-center '>
         <div className='text-center space-y-2'>
           <h1 className='text-white font-semibold text-[18px] bg-[#0D0D0D] border border-blue-700 cursor-pointer w-32 py-1 mx-auto rounded-md' >FAQ </h1>
-          <p className='text-white font-semibold text-5xl'>Questions? Answers.</p>
+          <p className='text-white font-semibold sm:text-4xl text-3xl md:text-5xl'>Questions? Answers.</p>
         </div>
-        <div className='w-[60%] mx-auto space-y-3 mt-10'>
+        <div className='md:w-[60%] sm:w-[70%] w-[90%] mx-auto space-y-3 mt-10'>
 
           <div className="collapse collapse-arrow bg-gray-900 border border-base-300 text-white">
             <input type="checkbox" />
@@ -342,6 +381,7 @@ after:absolute after:left-0  after:bottom-0 after:w-full after:h-1/2 after:bg-bl
               We keep thing Simple and transparent. you'll get a dedicated project manager and acces to your collaboration tools ( Whatsapp , Notion, Trello ) to Track Progress and share feedback,, sand stay in the loop
             </div>
           </div>
+
           <div className="collapse collapse-arrow bg-gray-900 border border-base-300 text-white">
             <input type="checkbox" />
             <div className="collapse-title font-semibold text-[18px]">What if I need my Website done urgently ?</div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaArrowUp, FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { FaSquareWhatsapp } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
@@ -68,9 +69,13 @@ export default function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Logo + About */}
         <div>
-          <h1 className="text-[25px] font-bold flex items-center gap-2">
-            <span className="text-blue-500 ">⧉</span > WEB TH
-          </h1>
+         <div className="flex items-center space-x-2">
+          <div className="w-8 h-8 bg-blue-500 rotate-45 rounded-sm"></div>
+          <div className="flex flex-col">
+            <span className="font-bold text-xl">WEB TH </span>
+            <span className="text-xs text-gray-400">Website Development Agency</span>
+          </div>
+        </div>
           <p className="text-[17px] mt-3">
             Driving Digital Growth with <br /> Innovation & Strategy
           </p>
@@ -88,7 +93,7 @@ export default function Footer() {
               menuItems.map(
                 (menu, index) => {
                   return (
-                    <Link to={menu.to} key={menu.index}>
+                    <Link to={menu.to} key={menu.id}>
                       <li><span className="hover:text-blue-400">{menu.name}</span></li>
                     </Link>
                   )
@@ -107,7 +112,7 @@ export default function Footer() {
               Services.map(
                 (service, data) => {
                   return (
-                    <Link >
+                    <Link key={service.id} >
                       <li><span className="hover:text-blue-400 ">{service.name}</span></li>
                     </Link>
                   )
@@ -160,9 +165,10 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className=" border-t border-gray-700 mt-10 pt-4 text-center text-sm text-gray-400">
+      <div className=" relative border-t border-gray-700 mt-10 pt-4 text-center text-sm text-gray-400">
         © {new Date().getFullYear()} WEB TH Agency. All rights reserved.
-        <span className=' fixed bottom-10 right-10 w-10 h-10 bg-blue-600 rounded-xl text-xl text-white p-[10px] item-center '> <a href="#top"> <FaArrowUp /> </a> </span>
+        <span className=' z-[999] fixed bottom-10 right-10 w-10 h-10 bg-blue-600 rounded-xl text-xl text-white p-[10px] item-center '> <a href="#top"> <FaArrowUp /> </a> </span>
+
       </div>
     </footer>
   )

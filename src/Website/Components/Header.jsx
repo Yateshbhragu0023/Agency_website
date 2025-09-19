@@ -66,9 +66,9 @@ export default function Header() {
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-8 text-[17px] font-medium">
           {menuItems.map((item, i) => (
-            <Link to={item.to}>
+            <Link to={item.to}  key={i}>
               <span
-                key={i}
+               
                 className="relative text-gray-300 hover:text-blue-400 transition">
                 {item.name}
                 <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
@@ -103,13 +103,13 @@ export default function Header() {
             <Link to={item.to}>
               <span
                 key={i}
-                className="block text-gray-300  hover:text-purple-400 transition"
+                className="block text-gray-300  hover:text-blue-400 transition"
               >
                 {item.name}
               </span>
             </Link>
           ))}
-          <button className="w-full flex items-center justify-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-purple-700 transition">
+          <button className="w-full flex items-center justify-center space-x-2 bg-blue-700 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-800 transition">
             <Phone size={18} />
             <a href="https://wa.me/9672427970?text=Hi,%20Mr.%20yatesh%20i%20want%20a%20website%20for%20my%20business">
               <span className="font-semibold">Chat With Us</span>
