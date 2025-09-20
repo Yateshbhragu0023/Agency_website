@@ -10,20 +10,22 @@ export default function Login() {
 
   const loginHandle = (e) => {
     e.preventDefault()
-    const formdata = new FormData()
-    formdata.append("email", e.target.email.value),
-      formdata.append("password", e.target.password.value)
+    const data = {
+      "email": e.target.email.value,
+      "password": e.target.password.value
+    }
+    console.log(data)
 
-    axios.post(API_BASE_URL + admin_URL + "/create" , formdata).then(
+    axios.post(API_BASE_URL + admin_URL + "/create", data).then(
       (succes) => {
         console.log(succes.data)
-        ToastNotify(succes.data.msg , succes.data.status)
-        if(succes.data.status == 1){
+        ToastNotify(succes.data.msg, succes.data.status)
+        if (succes.data.status == 1) {
           e.target.reset()
         }
       }
     ).catch(
-      (error)=>{
+      (error) => {
         console.log(error)
       }
     )
