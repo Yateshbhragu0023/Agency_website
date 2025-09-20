@@ -12,7 +12,7 @@ export default function Context({ children }) {
   const ToastNotify = (msg, status) => toast(msg, { type: status == true ? 'success' : 'error' })
 
   const FetchAllProjects = () => {
-    axios.get("http://localhost:5001" + "/project").then(
+    axios.get(API_BASE_URL + project_URL).then(
       (succes) => {
         setProjects(succes.data.project)
       }
