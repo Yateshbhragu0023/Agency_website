@@ -53,7 +53,7 @@ export default function ViewProject() {
               className="bg-white rounded-xl shadow-md hover:shadow-lg transition p-4 flex flex-col"
             >
               <img
-                src={API_BASE_URL + `/projectimages/${project.ImageName}`}
+                src={API_BASE_URL + `/ProjectImages/${project.ImageName}`}
                 alt={project.title}
                 className="w-full h-40 object-cover rounded-lg mb-4"
               />
