@@ -18,6 +18,8 @@ import ViewService from './AdminPanel/Compenents/Service/ViewService'
 import AddService from './AdminPanel/Compenents/Service/AddService'
 import ViewTeam from './AdminPanel/Compenents/Team/ViewTeam'
 import AddTeam from './AdminPanel/Compenents/Team/AddTeam'
+import Login from './AdminPanel/Login'
+import SignUp from './AdminPanel/SignUp'
 
 export default function App() {
 
@@ -94,6 +96,14 @@ export default function App() {
             element : <AddTeam/>
           }
         ]
+      },
+      {
+        path : 'loginadmin',
+        element : <Login/>
+      },
+      {
+        path : 'signupadmin',
+        element : <SignUp/>
       }
     ]
   )
