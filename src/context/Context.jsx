@@ -27,7 +27,7 @@ export default function Context({ children }) {
 
   return (
     <>
-      <MainContext.Provider value={{API_BASE_URL , project_URL, FetchAllProjects , ToastNotify , Projects , setProjects}}>
+      <MainContext.Provider value={{API_BASE_URL , admin_URL, project_URL, FetchAllProjects , ToastNotify , Projects , setProjects}}>
         {children}
       </MainContext.Provider>
       <ToastContainer autoClose={1000} />
