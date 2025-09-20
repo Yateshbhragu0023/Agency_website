@@ -7,7 +7,7 @@ export const MainContext = createContext()
 export default function Context({ children }) {
 
   const [Projects, setProjects] = useState([])
-  const API_BASE_URL = "https://agency-backend-13.onrender.com/"
+  const API_BASE_URL = "https://agency-backend-13.onrender.com"
   const project_URL = "/project"
   const ToastNotify = (msg, status) => toast(msg, { type: status == true ? 'success' : 'error' })
 
