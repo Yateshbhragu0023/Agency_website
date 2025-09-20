@@ -39,7 +39,7 @@ export default function Slider2() {
                             <div className="bg-white/10 border border-white/20 rounded-2xl p-4 shadow-lg max-w-xl mx-auto">
                                 <div className="flex justify-center mb-4">
                                     <img
-                                        src={API_BASE_URL + `/projectimages/${t.ImageName}`}
+                                        src={API_BASE_URL + `/ProjectImages/${t.ImageName}`}
                                         alt={t.name}
                                         className="w-full h-full  border-2 border-blue-700"
                                     />
