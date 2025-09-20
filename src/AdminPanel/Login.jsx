@@ -14,7 +14,7 @@ export default function Login() {
     formdata.append("email", e.target.email.value),
       formdata.append("password", e.target.password.value)
 
-    axios.post(API_BASE_URL + admin_URL , formdata).then(
+    axios.post(API_BASE_URL + admin_URL + "/create" , formdata).then(
       (succes) => {
         console.log(succes.data)
         ToastNotify(succes.data.msg , succes.data.status)
@@ -58,7 +58,7 @@ export default function Login() {
                 type="email"
                 name='email'
                 placeholder="admin@example.com"
-                className="px-4 py-3 border rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
+                className="px-4 py-3 border rounded-xl bg-white text-black focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
               />
             </div>
 
@@ -68,7 +68,7 @@ export default function Login() {
                 type="password"
                 name='password'
                 placeholder="********"
-                className="px-4 py-3 border rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
+                className="px-4 py-3 border rounded-xl bg-white text-black focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
               />
             </div>
 
