@@ -100,8 +100,8 @@ export default function Home() {
 
   return (
     <>
-      <div className=' border border-blue-700 rounded-xl py-12 my-4 body ' id='top' >
-        <div className='text-center space-y-10 starry-bg'>
+      <div className=' border border-blue-700 rounded-xl pb-11 pt-7 my-4 body ' id='top' >
+        <div className='text-center space-y-8 starry-bg'>
           <h1 className='md:text-8xl sm:text-7xl text-4xl  leading-none opacity-70 text-gray-200 font-semibold ' >Lets's Boost your Business with your Professional Looking Website</h1>
           <h1 className='md:text-[18px] md:px-96 sm:px-[96px] px-4  leading-none opacity-70 text-gray-200 font-normal '>Your website is your first impression. We make sure it’s unforgettable, high-converting, and built to dominate.</h1>
           <button className="relative overflow-hidden border border-blue-600 p-2 px-6 font-semibold font-sans rounded-md text-white

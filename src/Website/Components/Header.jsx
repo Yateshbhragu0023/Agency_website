@@ -51,7 +51,7 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <header className={`w-full bg-black text-white shadow-md sticky top-0 z-[999] border border-blue-700 rounded-2xl p-2 mt-4 transition-all duration-300 ${isScrolled ? "py-2 px-4 top-5" : "py-4 px-6"}`}>
+    <header className={`w-full bg-black text-white shadow-md sticky top-0 z-[999] border border-blue-700 rounded-2xl p-2 mt-2 transition-all duration-300 ${isScrolled ? "py-2 px-4 top-5" : "py-2 px-6"}`}>
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
 
         {/* Logo */}
