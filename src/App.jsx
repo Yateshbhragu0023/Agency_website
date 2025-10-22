@@ -52,7 +52,7 @@ export default function App() {
         ]
       },
       {
-        path: "admin",
+        path: "urlyt23",
         element : <AdminLayout/>,
         children : [
           {
